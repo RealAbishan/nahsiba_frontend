@@ -42,381 +42,528 @@ class _AccountPageState extends State<AccountPage> {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: Column(
-        children: [
-          Container(
-            height: 120,
-            child: Stack(
-              children: [
-                Positioned(
-                    left: 10,
-                    top: 60,
-                    child: Row(
-                      children: [
-                        IconButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => MainPage()));
-                            },
-                            icon: Icon(
-                              Icons.chevron_left_rounded,
-                              color: kPrimaryColor,
-                              size: 39,
-                            )),
-                      ],
-                    )),
-
-                Positioned(
-                    left: 168,
-                    top: 75,
-                    child: Text(
-                      "Profile",
-                      style: TextStyle(fontSize: 20, color: kPrimaryColor,
-                          fontWeight: FontWeight.bold),
-                    )),
-
-                Positioned(
-                    left: 330,
-                    top: 60,
-                    child: Row(
-                      children: [
-                        IconButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => BusBookingHomeScreen()));
-                            },
-                            icon: Icon(
-                              Icons.settings,
-                              color: kPrimaryColor,
-                              size: 39,
-                            )),
-                      ],
-                    )),
-
-              ],
-            ),
-          ),
-          //Profile Image
-          Container(
-            padding: const EdgeInsets.only(left: 10),
-            width: width * 0.7,
-            height: height * 0.14,
-
-            child: Stack(
+      body: Container(
+        padding: const EdgeInsets.fromLTRB(30, 64, 30, 16),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
 
-                Positioned(
-                    left:0,
-                    right: 0,
-                    child: CircleAvatar(
-                      radius: 56,
-                      backgroundColor: Colors.grey.shade200,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8), // Border radius
-                        child: ClipOval(child:image != null ? Image.file(image!): Image
-                            .network
-                          ('https://img1'
-                            '.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/316500/316500.png')),
+                //Top Gesture Arrow
+
+
+
+                //Profile Image
+                Container(
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              'Baveega',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Row(
+                              children: [
+                                Icon(Icons
+                                    .star,
+                                    size: 20,color:Colors.black),
+                                Text(
+                                  '5.0',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 12,
+                                    color: Colors.black,
+                                  ),
+                                ),
+
+
+                              ],
+                            )
+                          ],
+                        ),
                       ),
-                    )
+                      Expanded(child: Container()),
+
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              margin: const EdgeInsets.only
+                                (bottom: 5, top: 15,left: 60),
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: kPrimaryLightColor,
+                                borderRadius: BorderRadius
+                                    .circular(30),
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: const [
+                                  Icon(Icons
+                                      .person,
+                                      size: 20,color:bWhite),
+
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
 
-                Positioned(
-                    left: 155,
-                    top: 90,
-                    child: GestureDetector(
-                      //  onTap: () => selectFromGallery(),
-                      child: Icon(Icons.camera_enhance_outlined, size: 24,
-                          color:kPrimaryColor.withOpacity(0.4)),
-                    )),
+                SizedBox(height: 20,),
+
+                // Buttons
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      // onTap:(){
+                      //   Navigator.push(context, MaterialPageRoute
+                      //     (builder: (context) => BusBookingSelectPage()));
+                      // },
+                      child: Column(
+                        children: [
+                          Container(
+                            margin: const EdgeInsets.only(bottom: 10),
+                            width: 100,
+                            height: 80,
+                            decoration: BoxDecoration(
+                              color: kPrimaryLightColor,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Icon(Icons.help_outline_rounded, size: 20,color:bWhite),
+                                SizedBox(height: 4,),
+                                Text(
+                                  "Help",
+                                  style: TextStyle(fontSize: 12, color:bWhite,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ),
+
+                        ],
+                      ),
+                    ),
+
+                    GestureDetector(
+                      // onTap:(){
+                      //   Navigator.push(context, MaterialPageRoute
+                      //     (builder: (context) => BusBookingSelectPage()));
+                      // },
+                      child: Column(
+                        children: [
+                          Container(
+                            margin: const EdgeInsets.only(bottom: 10),
+                            width: 100,
+                            height: 80,
+                            decoration: BoxDecoration(
+                              color: kPrimaryLightColor,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Icon(Icons.wallet, size: 20,color:bWhite),
+                                SizedBox(height: 4,),
+                                Text(
+                                  "Wallet",
+                                  style: TextStyle(fontSize: 12, color:bWhite,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ),
+
+                        ],
+                      ),
+                    ),
+
+                    GestureDetector(
+                      // onTap:(){
+                      //   Navigator.push(context, MaterialPageRoute
+                      //     (builder: (context) => BusBookingSelectPage()));
+                      // },
+                      child: Column(
+                        children: [
+                          Container(
+                            margin: const EdgeInsets.only(bottom: 10),
+                            width: 100,
+                            height: 80,
+                            decoration: BoxDecoration(
+                              color: kPrimaryLightColor,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Icon(Icons.access_time_filled_outlined, size: 20,color:bWhite),
+                                SizedBox(height: 4,),
+                                Text(
+                                  "Trips",
+                                  style: TextStyle(fontSize: 12, color:bWhite,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ),
+
+                        ],
+                      ),
+                    ),
+
+
+
+                  ],
+                ),
+
+
+                SizedBox(height: 20,),
+
+
+
+
+
+
+                SizedBox(height: 15,),
+                //Settings
+                Container(
+                  padding: const EdgeInsets.only(left: 20),
+                  width: width * 0.89,
+                  height: height * 0.07,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(30)),
+                      color: bWhite.withOpacity(0.8),
+                      boxShadow: [
+                        BoxShadow(
+
+                            offset: Offset(1,1),
+                            color: Colors.grey.withOpacity(0.3)
+                        )
+                      ]
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.fromLTRB(3, 15, 15, 5),
+                        child: Row(
+                          children: [
+                            Icon(Icons.settings, size: 30,color:kPrimaryColor),
+                            SizedBox(width: 6,),
+                            Text(
+                              "Settings",
+                              style: TextStyle(fontSize: 20, color: kPrimaryColor,
+                                  fontWeight: FontWeight.bold),
+                            ),
+
+                            Expanded(child: Container()),
+                            Icon(Icons.arrow_forward_ios_rounded, size: 30,color:kPrimaryColor),
+
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(height: 8,),
+
+                //Refer a friend
+                Container(
+                  padding: const EdgeInsets.only(left: 20),
+                  width: width * 0.89,
+                  height: height * 0.07,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(30)),
+                      color: bWhite.withOpacity(0.8),
+                      boxShadow: [
+                        BoxShadow(
+
+                            offset: Offset(1,1),
+                            color: Colors.grey.withOpacity(0.3)
+                        )
+                      ]
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.fromLTRB(3, 15, 15, 5),
+                        child: Row(
+                          children: [
+                            Icon(Icons.person_pin, size: 30,color:kPrimaryColor),
+                            SizedBox(width: 6,),
+                            Text(
+                              "Refer a Friend",
+                              style: TextStyle(fontSize: 20, color: kPrimaryColor,
+                                  fontWeight: FontWeight.bold),
+                            ),
+
+                            Expanded(child: Container()),
+                            Icon(Icons.arrow_forward_ios_rounded, size: 30,color:kPrimaryColor),
+
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+
+
+                SizedBox(height: 8,),
+
+                //Feedbacks
+                Container(
+                  padding: const EdgeInsets.only(left: 20),
+                  width: width * 0.89,
+                  height: height * 0.07,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(30)),
+                      color: bWhite.withOpacity(0.8),
+                      boxShadow: [
+                        BoxShadow(
+
+                            offset: Offset(1,1),
+                            color: Colors.grey.withOpacity(0.3)
+                        )
+                      ]
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.fromLTRB(3, 15, 15, 5),
+                        child: Row(
+                          children: [
+                            Icon(Icons.feedback_outlined, size: 30,color:kPrimaryColor),
+                            SizedBox(width: 6,),
+                            Text(
+                              "Feedbacks",
+                              style: TextStyle(fontSize: 20, color: kPrimaryColor,
+                                  fontWeight: FontWeight.bold),
+                            ),
+
+                            Expanded(child: Container()),
+                            Icon(Icons.arrow_forward_ios_rounded, size: 30,color:kPrimaryColor),
+
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+
+
+                SizedBox(height: 8,),
+
+                //FAQs
+                Container(
+                  padding: const EdgeInsets.only(left: 20),
+                  width: width * 0.89,
+                  height: height * 0.07,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(30)),
+                      color: bWhite.withOpacity(0.8),
+                      boxShadow: [
+                        BoxShadow(
+                            offset: Offset(1,1),
+                            color: Colors.grey.withOpacity(0.3)
+                        )
+                      ]
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.fromLTRB(3, 15, 15, 5),
+                        child: Row(
+                          children: [
+                            Icon(Icons.question_mark_sharp, size: 30,color:kPrimaryColor),
+                            SizedBox(width: 6,),
+                            Text(
+                              "FAQs",
+                              style: TextStyle(fontSize: 20, color: kPrimaryColor,
+                                  fontWeight: FontWeight.bold),
+                            ),
+
+                            Expanded(child: Container()),
+                            Icon(Icons.arrow_forward_ios_rounded, size: 30,color:kPrimaryColor),
+
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(height: 8,),
+
+                //Customer Support
+                Container(
+                  padding: const EdgeInsets.only(left: 20),
+                  width: width * 0.89,
+                  height: height * 0.07,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(30)),
+                      color: bWhite.withOpacity(0.8),
+                      boxShadow: [
+                        BoxShadow(
+
+                            offset: Offset(1,1),
+                            color: Colors.grey.withOpacity(0.3)
+                        )
+                      ]
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.fromLTRB(3, 15, 15, 5),
+                        child: Row(
+                          children: [
+                            Icon(Icons.support_agent_rounded, size: 30,color:kPrimaryColor),
+                            SizedBox(width: 6,),
+                            Text(
+                              "Customer Support",
+                              style: TextStyle(fontSize: 20, color: kPrimaryColor,
+                                  fontWeight: FontWeight.bold),
+                            ),
+
+                            Expanded(child: Container()),
+                            Icon(Icons.arrow_forward_ios_rounded, size: 30,color:kPrimaryColor),
+
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(height: 8,),
+
+                //About Us
+                Container(
+                  padding: const EdgeInsets.only(left: 20),
+                  width: width * 0.89,
+                  height: height * 0.07,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(30)),
+                      color: bWhite.withOpacity(0.8),
+                      boxShadow: [
+                        BoxShadow(
+
+                            offset: Offset(1,1),
+                            color: Colors.grey.withOpacity(0.3)
+                        )
+                      ]
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.fromLTRB(3, 15, 15, 5),
+                        child: Row(
+                          children: [
+                            Icon(Icons.history, size: 30,color:kPrimaryColor),
+                            SizedBox(width: 6,),
+                            Text(
+                              "About Us",
+                              style: TextStyle(fontSize: 20, color: kPrimaryColor,
+                                  fontWeight: FontWeight.bold),
+                            ),
+
+                            Expanded(child: Container()),
+                            Icon(Icons.arrow_forward_ios_rounded, size: 30,color:kPrimaryColor),
+
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+
+
+                SizedBox(height: 8,),
+
+                //Logout
+                Container(
+                  padding: const EdgeInsets.only(left: 20),
+                  width: width * 0.89,
+                  height: height * 0.07,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(30)),
+                      color: bWhite.withOpacity(0.8),
+                      boxShadow: [
+                        BoxShadow(
+
+                            offset: Offset(1,1),
+                            color: Colors.grey.withOpacity(0.3)
+                        )
+                      ]
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.fromLTRB(3, 15, 15, 5),
+                        child: Row(
+                          children: [
+                            Icon(Icons.logout, size: 30,color:Colors.red),
+                            SizedBox(width: 6,),
+                            Text(
+                              "Logout",
+                              style: TextStyle(fontSize: 20, color: Colors.red,
+                                  fontWeight: FontWeight.bold),
+                            ),
+
+
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+
+
+
+                //Copyright Text
+                Container(
+                  padding: const EdgeInsets.only(left: 10),
+                  width: width * 0.89,
+                  height: height * 0.07,
+
+                  child: Stack(
+                    children: [
+                      Positioned(
+                          left: 45,
+                          top: 19,
+                          child: Icon(Icons.copyright_outlined, size: 14,
+                            color:kPrimaryColor.withOpacity(0.7),)),
+                      Positioned(
+                          left: 60,
+                          top: 20,
+                          child: Text(
+                            "Designed and Developed by Nahsiba",
+                            style: TextStyle(fontSize: 12, color: kPrimaryColor.withOpacity(0.7),
+                                fontWeight: FontWeight.bold),
+                          )),
+
+                    ],
+                  ),
+                ),
 
               ],
             ),
           ),
 
-          SizedBox(height: 15,),
-
-          //Edit Profile
-          Container(
-            padding: const EdgeInsets.only(left: 10),
-            width: width * 0.7,
-            height: height * 0.07,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(30)),
-                color: kPrimaryColor.withOpacity(0.8),
-                boxShadow: [
-                  BoxShadow(
-                      blurRadius: 10,
-                      spreadRadius: 7,
-                      offset: Offset(1,1),
-                      color: Colors.grey.withOpacity(0.3)
-                  )
-                ]
-            ),
-            child: Stack(
-              children: [
-
-                Positioned(
-                    left: 85,
-                    top: 20,
-                    child: Text(
-                      "Edit Profile",
-                      style: TextStyle(fontSize: 18, color: bWhite,
-                          fontWeight: FontWeight.bold),
-                    )),
-
-              ],
-            ),
-          ),
-
-          SizedBox(height: 15,),
-          //Privacy
-          Container(
-            padding: const EdgeInsets.only(left: 10),
-            width: width * 0.89,
-            height: height * 0.07,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(30)),
-                color: bWhite.withOpacity(0.8),
-                boxShadow: [
-                  BoxShadow(
-                      blurRadius: 10,
-                      spreadRadius: 7,
-                      offset: Offset(1,1),
-                      color: Colors.grey.withOpacity(0.3)
-                  )
-                ]
-            ),
-            child: Stack(
-              children: [
-                Positioned(
-                    left: 20,
-                    top: 19,
-                    child: Icon(Icons.privacy_tip_outlined, size: 24, color:
-                    kPrimaryColor,)),
-                Positioned(
-                    left: 60,
-                    top: 20,
-                    child: Text(
-                      "Privacy",
-                      style: TextStyle(fontSize: 18, color: kPrimaryColor,
-                          fontWeight: FontWeight.bold),
-                    )),
-                Positioned(
-                    right: 15,
-                    top: 14,
-                    child: Icon(Icons.chevron_right_outlined, size: 36, color:
-                    kPrimaryColor,)),
-              ],
-            ),
-          ),
-
-          SizedBox(height: 15,),
-
-          //Settings
-          Container(
-            padding: const EdgeInsets.only(left: 10),
-            width: width * 0.89,
-            height: height * 0.07,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(30)),
-                color: bWhite.withOpacity(0.8),
-                boxShadow: [
-                  BoxShadow(
-                      blurRadius: 10,
-                      spreadRadius: 7,
-                      offset: Offset(1,1),
-                      color: Colors.grey.withOpacity(0.3)
-                  )
-                ]
-            ),
-            child: Stack(
-              children: [
-                Positioned(
-                    left: 20,
-                    top: 19,
-                    child: Icon(Icons.settings_outlined, size: 24, color:
-                    kPrimaryColor,)),
-                Positioned(
-                    left: 60,
-                    top: 20,
-                    child: Text(
-                      "Settings",
-                      style: TextStyle(fontSize: 18, color: kPrimaryColor,
-                          fontWeight: FontWeight.bold),
-                    )),
-                Positioned(
-                    right: 15,
-                    top: 14,
-                    child: Icon(Icons.chevron_right_outlined, size: 36, color:
-                    kPrimaryColor,)),
-              ],
-            ),
-          ),
-
-          SizedBox(height: 15,),
-
-          //Help and Support
-          Container(
-            padding: const EdgeInsets.only(left: 10),
-            width: width * 0.89,
-            height: height * 0.07,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(30)),
-                color: bWhite.withOpacity(0.8),
-                boxShadow: [
-                  BoxShadow(
-                      blurRadius: 10,
-                      spreadRadius: 7,
-                      offset: Offset(1,1),
-                      color: Colors.grey.withOpacity(0.3)
-                  )
-                ]
-            ),
-            child: Stack(
-              children: [
-                Positioned(
-                    left: 20,
-                    top: 19,
-                    child: Icon(Icons.help_outline_sharp, size: 24, color:
-                    kPrimaryColor,)),
-                Positioned(
-                    left: 60,
-                    top: 20,
-                    child: Text(
-                      "Help & Support",
-                      style: TextStyle(fontSize: 18, color: kPrimaryColor,
-                          fontWeight: FontWeight.bold),
-                    )),
-                Positioned(
-                    right: 15,
-                    top: 14,
-                    child: Icon(Icons.chevron_right_outlined, size: 36, color:
-                    kPrimaryColor,)),
-              ],
-            ),
-          ),
-
-          SizedBox(height: 15,),
-
-          //Invite a Friend
-          Container(
-            padding: const EdgeInsets.only(left: 10),
-            width: width * 0.89,
-            height: height * 0.07,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(30)),
-                color: bWhite.withOpacity(0.8),
-                boxShadow: [
-                  BoxShadow(
-                      blurRadius: 10,
-                      spreadRadius: 7,
-                      offset: Offset(1,1),
-                      color: Colors.grey.withOpacity(0.3)
-                  )
-                ]
-            ),
-            child: Stack(
-              children: [
-                Positioned(
-                    left: 20,
-                    top: 19,
-                    child: Icon(Icons.supervised_user_circle_outlined, size: 24, color:
-                    kPrimaryColor,)),
-                Positioned(
-                    left: 60,
-                    top: 20,
-                    child: Text(
-                      "Invite a Friend",
-                      style: TextStyle(fontSize: 18, color: kPrimaryColor,
-                          fontWeight: FontWeight.bold),
-                    )),
-                Positioned(
-                    right: 15,
-                    top: 14,
-                    child: Icon(Icons.chevron_right_outlined, size: 36, color:
-                    kPrimaryColor,)),
-              ],
-            ),
-          ),
-
-          SizedBox(height: 15,),
-
-          //Logout
-          Container(
-            padding: const EdgeInsets.only(left: 10),
-            width: width * 0.89,
-            height: height * 0.07,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(30)),
-                color: bWhite.withOpacity(0.8),
-                boxShadow: [
-                  BoxShadow(
-                      blurRadius: 10,
-                      spreadRadius: 7,
-                      offset: Offset(1,1),
-                      color: Colors.grey.withOpacity(0.3)
-                  )
-                ]
-            ),
-            child: GestureDetector(
-              // onTap: (){
-              //   AuthController.instance.logOut();
-              // },
-              child: Stack(
-                children: [
-                  Positioned(
-                      left: 20,
-                      top: 19,
-                      child: Icon(Icons.logout_outlined, size: 24, color:
-                      Colors.red,)),
-                  Positioned(
-                      left: 60,
-                      top: 20,
-                      child: Text(
-                        "Logout",
-                        style: TextStyle(fontSize: 18, color: Colors.red,
-                            fontWeight: FontWeight.bold),
-                      )),
-
-                ],
-              ),
-            ),
-          ),
-
-
-          SizedBox(height: 15,),
-
-          //Copyright Text
-          Container(
-            padding: const EdgeInsets.only(left: 10),
-            width: width * 0.89,
-            height: height * 0.07,
-
-            child: Stack(
-              children: [
-                Positioned(
-                    left: 45,
-                    top: 19,
-                    child: Icon(Icons.copyright_outlined, size: 14,
-                      color:kPrimaryColor.withOpacity(0.7),)),
-                Positioned(
-                    left: 60,
-                    top: 20,
-                    child: Text(
-                      "Designed and Developed by Nahsiba",
-                      style: TextStyle(fontSize: 12, color: kPrimaryColor.withOpacity(0.7),
-                          fontWeight: FontWeight.bold),
-                    )),
-
-              ],
-            ),
-          ),
-        ],
       ),
 
     );
