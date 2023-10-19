@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:nahsiba/constants/app_colors.dart';
-import 'package:nahsiba/pages/NavPages/home_page.dart';
+import 'package:nahsiba/pages/welcome_page.dart';
 import 'package:nahsiba/pages/main_page.dart';
 import 'package:nahsiba/pages/welcome_page.dart';
 
@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
         const Duration(seconds: 5),
             () => Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (BuildContext context) => const MainPage())));
+            builder: (BuildContext context) => MainPage())));
 
     //   var assetsImage = const AssetImage(
     //     '/assets/Logos/AllGreen.png'); //<- Creates an object that fetches an image.
