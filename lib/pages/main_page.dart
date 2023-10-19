@@ -24,7 +24,7 @@ class _MainPageState extends State<MainPage> {
     BusBookingHomeScreen(),
     BusBookingDetailPage(),
 
-    BusBookingSelectPage(),
+    AccountPage(),
   ];
 
   int currentIndex=0;

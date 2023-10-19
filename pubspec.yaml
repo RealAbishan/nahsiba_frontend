@@ -49,6 +49,15 @@ dependencies:
   ionicons: any
   flutter_svg: any
   searchfield: ^0.8.6
+  get:
+  firebase_auth: ^4.3.0
+  firebase_core: ^2.8.0
+  http: ^0.13.5
+  provider: ^6.0.5
+  dio: ^5.1.1
+  image_picker: ^0.8.7+1
+  path_provider: ^2.0.14
+  qr_flutter: ^4.0.0
 
 dev_dependencies:
   flutter_test:
