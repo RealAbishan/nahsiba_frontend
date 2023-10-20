@@ -207,6 +207,93 @@ class _BusBookingDetailPageState extends State<BusBookingDetailPage> {
 
             SizedBox(height: 20,),
 
+            Center(
+              child: Container(
+                margin: const EdgeInsets.symmetric(vertical: 20),
+                height: 58,
+                width: MediaQuery.of(context).size.width ,
+                decoration: BoxDecoration(
+                  color: kPrimaryColor.withOpacity(0.3),
+                  borderRadius: BorderRadius.circular(32),
+                ),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            tripType = true;
+                          });
+                        },
+                        child: tripType
+                            ? Container(
+                          decoration: BoxDecoration(
+                            color: kPrimaryColor,
+                            borderRadius: BorderRadius.circular(32),
+                          ),
+                          child: const Center(
+                            child: Text(
+                              "Upcoming",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        )
+                            : const Center(
+                          child: Text(
+                            "Upcoming",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            tripType = false;
+                          });
+                        },
+                        child: !tripType
+                            ? Container(
+                          decoration: BoxDecoration(
+                            color: kPrimaryColor,
+                            borderRadius: BorderRadius.circular(32),
+                          ),
+                          child: const Center(
+                            child: Text(
+                              "Past Trips",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        )
+                            : const Center(
+                          child: Text(
+                            "Past Trips",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
             Container(
               child: SingleChildScrollView(
                 child: Column(
