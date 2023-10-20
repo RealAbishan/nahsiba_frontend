@@ -66,8 +66,10 @@ class _AccountPageState extends State<AccountPage> {
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
+                                fontSize: 26,
                               ),
                             ),
+
                             SizedBox(
                               height: 8,
                             ),
@@ -103,7 +105,7 @@ class _AccountPageState extends State<AccountPage> {
                               width: 50,
                               height: 50,
                               decoration: BoxDecoration(
-                                color: kPrimaryLightColor,
+                                color: kPrimaryColor.withOpacity(0.3),
                                 borderRadius: BorderRadius
                                     .circular(30),
                               ),
@@ -142,7 +144,7 @@ class _AccountPageState extends State<AccountPage> {
                             width: 100,
                             height: 80,
                             decoration: BoxDecoration(
-                              color: kPrimaryLightColor,
+                              color: kPrimaryColor.withOpacity(0.3),
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: Column(
@@ -175,7 +177,7 @@ class _AccountPageState extends State<AccountPage> {
                             width: 100,
                             height: 80,
                             decoration: BoxDecoration(
-                              color: kPrimaryLightColor,
+                              color: kPrimaryColor.withOpacity(0.3),
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: Column(
@@ -208,7 +210,7 @@ class _AccountPageState extends State<AccountPage> {
                             width: 100,
                             height: 80,
                             decoration: BoxDecoration(
-                              color: kPrimaryLightColor,
+                              color: kPrimaryColor.withOpacity(0.3),
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: Column(
@@ -236,10 +238,6 @@ class _AccountPageState extends State<AccountPage> {
 
 
                 SizedBox(height: 20,),
-
-
-
-
 
 
                 SizedBox(height: 15,),

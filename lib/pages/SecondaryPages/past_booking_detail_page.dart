@@ -293,7 +293,7 @@ class _PastBookingDetailsPageState extends State<PastBookingDetailsPage> {
                                               width: 40,
                                               height: 40,
                                               decoration: BoxDecoration(
-                                                color: kPrimaryLightColor,
+                                                color: kPrimaryColor.withOpacity(0.3),
                                                 borderRadius: BorderRadius
                                                     .circular(18),
                                               ),
@@ -508,7 +508,7 @@ class _PastBookingDetailsPageState extends State<PastBookingDetailsPage> {
                                               width: 40,
                                               height: 40,
                                               decoration: BoxDecoration(
-                                                color: kPrimaryLightColor,
+                                                color: kPrimaryColor.withOpacity(0.3),
                                                 borderRadius: BorderRadius
                                                     .circular(18),
                                               ),
