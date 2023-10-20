@@ -88,7 +88,7 @@ class _BusBookingHomeScreenState extends State<BusBookingHomeScreen> {
                 height: 58,
                 width: MediaQuery.of(context).size.width ,
                 decoration: BoxDecoration(
-                  color: activeIconColor.withOpacity(0.4),
+                  color: kPrimaryColor.withOpacity(0.3),
                   borderRadius: BorderRadius.circular(32),
                 ),
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),

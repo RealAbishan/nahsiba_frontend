@@ -121,7 +121,7 @@ class _BusBookingDetailPageState extends State<BusBookingDetailPage> {
                         width: 50,
                         height: 50,
                         decoration: BoxDecoration(
-                          color: kPrimaryLightColor,
+                          color: kPrimaryColor.withOpacity(0.3),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Row(
@@ -152,7 +152,7 @@ class _BusBookingDetailPageState extends State<BusBookingDetailPage> {
                         width: 50,
                         height: 50,
                         decoration: BoxDecoration(
-                          color: kPrimaryLightColor,
+                          color: kPrimaryColor.withOpacity(0.3),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Row(
@@ -183,7 +183,7 @@ class _BusBookingDetailPageState extends State<BusBookingDetailPage> {
                         width: 50,
                         height: 50,
                         decoration: BoxDecoration(
-                          color: kPrimaryLightColor,
+                          color: kPrimaryColor.withOpacity(0.3),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Row(
